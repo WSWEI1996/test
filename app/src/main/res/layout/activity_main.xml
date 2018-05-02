@@ -6,85 +6,51 @@
     android:layout_height="match_parent"
     tools:context="com.example.cjcu.test.MainActivity">
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="整存整付試算:"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
-
-    <TextView
-        android:id="@+id/lend"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="本金(NT$):"
-        app:layout_constraintTop_toBottomOf="@+id/title"
-        tools:layout_editor_absoluteX="0dp" />
-
-    <EditText
-        android:id="@+id/input_lend"
-        android:layout_width="382dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintTop_toBottomOf="@+id/lend"
-        tools:layout_editor_absoluteX="1dp" />
-
-    <TextView
-        android:id="@+id/rate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="年利率(%):"
-        app:layout_constraintTop_toBottomOf="@+id/input_lend"
-        tools:layout_editor_absoluteX="0dp" />
-
-    <EditText
-        android:id="@+id/input_rate"
-        android:layout_width="380dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintTop_toBottomOf="@+id/rate"
-        tools:layout_editor_absoluteX="2dp" />
-
-    <TextView
-        android:id="@+id/number"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="存款期數:"
-        app:layout_constraintTop_toBottomOf="@+id/input_rate"
-        tools:layout_editor_absoluteX="0dp" />
-
-    <EditText
-        android:id="@+id/input_number"
-        android:layout_width="382dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintTop_toBottomOf="@+id/number"
-        tools:layout_editor_absoluteX="1dp" />
-
-    <Button
-        android:id="@+id/submit"
-        android:layout_width="383dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="計算本利和"
-        app:layout_constraintTop_toBottomOf="@+id/input_number"
-        tools:layout_editor_absoluteX="1dp" />
-
-    <TextView
-        android:id="@+id/amount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="266dp" />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lend" />
+        <EditText
+            android:id="@+id/input_lend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numeric="integer" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rate" />
+        <EditText
+            android:id="@+id/input_rate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numeric="decimal" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/number" />
+        <EditText
+            android:id="@+id/input_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numeric="integer" />
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn" />
+        <TextView
+            android:id="@+id/amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="" />
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
